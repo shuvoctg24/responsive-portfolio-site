@@ -402,7 +402,7 @@ header::before {
     position: relative;
     flex-direction: column;
     padding: 1.6rem 1.8rem;
-    max-width: 77%;
+    max-width: 76%;
     background-color: var(--sbg);
     border-radius: 0.7rem;
     box-shadow: 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2);
@@ -543,7 +543,11 @@ header::before {
 
 .portfolio_container {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 8rem;
+}
+.container .portfolio-title{
+    color: var(--primary);
+    margin-bottom: 2rem;
 }
 
 .gallery {
@@ -551,7 +555,6 @@ header::before {
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    background-color: var(--black);
     border-radius: 2rem;
 }
 
@@ -561,7 +564,7 @@ header::before {
     margin: 1.2rem;
     border-radius: 0.3rem;
     overflow: hidden;
-    box-shadow: 0 3px 5px var(--primary);
+    box-shadow: 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2);
 }
 
 .gallery a img {
@@ -571,13 +574,19 @@ header::before {
 }
 
 .gallery a img:hover {
-    transform: scale(1.4);
+    transform: scale(1.3);
 }
+/* My Portfolio Section End Here */
 
-/* ======COURSES======= */
+
+/* My Courses Section Start Here */
 .courses {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 8rem;
+}
+.courses .container-title{
+    color: var(--primary);
+    margin: 2rem 0;
 }
 
 .courses_container {
@@ -587,9 +596,11 @@ header::before {
 }
 
 .course {
-    background-color: var(--black);
+    background-color: var(--sbg);
     text-align: center;
     border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2);
 }
 
 .course:hover {
@@ -605,33 +616,40 @@ header::before {
     margin: 1.2rem 0 2rem;
     font-size: 0.9rem;
 }
+/* My Courses Section End Here */
 
-/* ======FAQs SECTION======= */
+
+/* FAQs Section Start Here */
+
 .faqs {
     text-align: center;
     margin-top: 2rem;
+}
+
+.faqs .faqs-title{
+    color: var(--primary);
+    margin-bottom: 2rem;
 }
 
 .faqs_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    background-color: var(--black);
-    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
 }
 
 .faq {
-    padding: 2rem;
-    margin: 1rem;
+    padding: 1rem;
+    margin: 0.8rem;
     display: flex;
     align-items: center;
     gap: 1.4rem;
     height: fit-content;
-    background-color: var(--primary);
-    color: var(--bg);
+    background-color: var(--btn);
+    color: var(--normal);
     text-align: justify;
     cursor: pointer;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
+    box-shadow: 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2);
 }
 
 .faq h4 {
@@ -649,14 +667,16 @@ header::before {
     display: none;
 }
 
-/* for showing ans on click */
 .faq.open p {
     display: block;
 }
+/* FAQs Section End Here */
 
-/* ======Footer SECTION======= */
+
+
+/* Footer Section Start Here */
 footer {
-    padding-top: 5rem;
+    padding-top: 3rem;
     background-color: var(--black);
     font-size: 0.9rem;
 }
@@ -669,6 +689,7 @@ footer {
 
 .footer_container>div h4 {
     margin-bottom: 1.2rem;
+    color: var(--primary);
 }
 
 .footer_1 p {
@@ -690,17 +711,23 @@ footer ul li a:hover {
 
 .footer_social {
     display: flex;
-    gap: 1rem;
-    font-size: 1.2rem;
-    margin-top: 2rem;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .footer_copyright {
+    color: var(--primary);
     text-align: center;
     margin-top: 4rem;
     padding: 1.2rem 0;
     border-top: 1px solid var(--normal);
 }
+
+
+
+
+
 
 /* ======MEDIA QUERIES (TABLETS)======= */
 
