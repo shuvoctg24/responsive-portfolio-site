@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
 
 :root {
-    --gradient: linear-gradient(to bottom, #130f40, #190b39, #1c0732, #1d042b, #1e0025);
-    --primary: #FF8700;
+    --gradient: linear-gradient(to bottom, #130f40, #190b39, #1c0732, #2e0147, #2f013a);
+    --primary: #ffd000;
     --normal: #ffffff;
     --black: #13131a;
     --bg: #130f40;
@@ -25,7 +25,6 @@
     border: none;
     box-sizing: border-box;
     text-decoration: none;
-    text-transform: capitalize;
     list-style: none;
     transition: all 0.5s linear;
     scroll-behavior: smooth;
@@ -55,7 +54,7 @@ body {
 }
 main{
     background-color: #800080;
-    margin: 0 5rem;
+    /* margin: 0 5rem; */
 }
 
 .container {
@@ -110,6 +109,7 @@ img {
     border: 1px solid transparent;
     border-radius: 5rem;
     font-weight: 500;
+    font-size: 1.2rem;
 }
 
 .btn:hover {
@@ -124,7 +124,7 @@ img {
 nav {
     background-color: var(--bg);
     width: 100vw;
-    height: 6rem;
+    height: 4rem;
     position: fixed;
     top: 0;
     z-index: 1000;
@@ -195,18 +195,19 @@ header {
 }
 
 .header_left {
-    flex: 45%;
+    flex: 40%;
 }
 
 .header_right {
-    flex: 55%;
+    flex: 60%;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .header_right .text-1 {
     color: var(--primary);
     font-size: 2.4rem;
     font-weight: 450;
-    margin: 0.3rem 0;
 }
 
 .header_right .text-2 {
@@ -245,12 +246,12 @@ header::before {
 /* About Me Section Start Here */
 
 .about {
-    text-align: center;
     margin-top: 5rem;
 }
 
 .about .about-title{
     color: var(--primary);
+    text-align: center;
 
 }
 .about_container {
@@ -319,10 +320,11 @@ header::before {
 }
 
 .services_container .cards .card {
+    width: 90%;
+    height: fit-content;
     background-color: var(--sbg);
-    padding: 1.5rem 1rem;
+    padding: 1.5rem;
     margin: 0 1.5rem;
-    cursor: pointer;
     position: relative;
     box-shadow: 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2);
 }
@@ -331,7 +333,7 @@ header::before {
     font-size: 2rem;
     width: 4rem;
     height: 4rem;
-    color: var(--btn);
+    color: var(--primary);
     border: 2px solid var(--btn);
     border-radius: 50%;
     padding: 14px;
@@ -340,8 +342,12 @@ header::before {
 
 .sbox h3 {
     font-size: 1.2rem;
-    color: var(--normal);
+    color: var(--primary);
     padding-top: 1rem;
+}
+.sbox span {
+    font-size: 0.8rem;
+    color: gray;
 }
 
 .sbox p {
@@ -351,7 +357,7 @@ header::before {
 
 .sbox a {
     color: var(--normal);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 450;
     padding: 0.5rem 1.5rem;
     background-color: var(--btn);
@@ -366,7 +372,7 @@ header::before {
 
 .services_container .cards .card:hover .sbox i {
     background-color: var(--primary);
-    color: var(--bg);
+    color: var(--black);
 }
 
 .services_container .cards .card::after {
@@ -389,11 +395,10 @@ header::before {
 
 /* My Skills Section Start Here */
 
-
 .skills .new {
     text-align: center;
     color: var(--primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .skills_container {
@@ -450,7 +455,6 @@ header::before {
         transform: scaleX(1);
     }
 }
-
 .bar .progress-line span {
     height: 100%;
     position: absolute;
@@ -461,24 +465,60 @@ header::before {
     animation: animate 1s 3s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
-.bar .progress-line.html span {
+.bar .progress-line.graphic span {
+    width: 95%;
+}
+.progress-line.graphic span::after {
+    content: "95%";
+}
+
+.bar .progress-line.web span {
     width: 90%;
 }
-
-.bar .progress-line.css span {
-    width: 60%;
+.progress-line.web span::after {
+    content: "90%";
 }
 
-.bar .progress-line.jquery span {
+.bar .progress-line.video span {
+    width: 95%;
+}
+.progress-line.video span::after {
+    content: "95%";
+}
+
+.bar .progress-line.marketing span {
     width: 85%;
 }
-
-.bar .progress-line.python span {
-    width: 50%;
+.progress-line.marketing span::after {
+    content: "85%";
 }
 
-.bar .progress-line.mysql span {
-    width: 75%;
+.bar .progress-line.seo span {
+    width: 85%;
+}
+.progress-line.seo span::after {
+    content: "85%";
+}
+
+.bar .progress-line.voice span {
+    width: 90%;
+}
+.progress-line.voice span::after {
+    content: "90%";
+}
+
+.bar .progress-line.animation span {
+    width: 95%;
+}
+.progress-line.animation span::after {
+    content: "95%";
+}
+
+.bar .progress-line.graphy span {
+    width: 95%;
+}
+.progress-line.graphy span::after {
+    content: "95%";
 }
 
 .progress-line span::before {
@@ -493,9 +533,8 @@ header::before {
     border-right-width: 0rem;
     border-top-color: var(--bg);
     opacity: 0;
-    animation: showText2 0.5s 1s linear forwards;
+    animation: showText 0.3s 1s linear forwards;
 }
-
 .progress-line span::after {
     position: absolute;
     top: -1.8rem;
@@ -507,43 +546,22 @@ header::before {
     font-size: 0.7rem;
     border-radius: 0.2rem;
     opacity: 0;
-    animation: showText2 0.5s 1s linear forwards;
+    animation: showText 0.3s 1s linear forwards;
 }
-
-
-@keyframes showText2 {
+@keyframes showText {
     100% {
         opacity: 1;
     }
 }
-
-.progress-line.html span::after {
-    content: "90%";
-}
-
-.progress-line.css span::after {
-    content: "60%";
-}
-
-.progress-line.jquery span::after {
-    content: "85%";
-}
-
-.progress-line.python span::after {
-    content: "50%";
-}
-
-.progress-line.mysql span::after {
-    content: "75%";
-}
 /* My Skills Section End Here */
+
 
 
 /* My Portfolio Section Start Here */
 
 .portfolio_container {
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 6rem;
 }
 .container .portfolio-title{
     color: var(--primary);
@@ -579,44 +597,48 @@ header::before {
 /* My Portfolio Section End Here */
 
 
-/* My Courses Section Start Here */
-.courses {
+/* My Works Section Start Here */
+.works {
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 6rem;
 }
-.courses .container-title{
+.works .container-title{
     color: var(--primary);
     margin: 2rem 0;
 }
 
-.courses_container {
+.works_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
-.course {
+.work {
     background-color: var(--sbg);
     text-align: center;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-radius: 10px;
     box-shadow: 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2);
 }
 
-.course:hover {
+.work:hover {
     border-color: var(--primary);
     background: transparent;
 }
+.work img{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
 
-.course_info {
+.work_info {
     padding: 2rem;
 }
 
-.course_info p {
+.work_info p {
     margin: 1.2rem 0 2rem;
     font-size: 0.9rem;
 }
-/* My Courses Section End Here */
+/* My Works Section End Here */
 
 
 /* FAQs Section Start Here */
@@ -646,7 +668,7 @@ header::before {
     height: fit-content;
     background-color: var(--btn);
     color: var(--normal);
-    text-align: justify;
+    text-align: left;
     cursor: pointer;
     border-radius: 0.8rem;
     box-shadow: 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2);
@@ -688,16 +710,16 @@ footer {
 }
 
 .footer_container>div h4 {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     color: var(--primary);
 }
 
 .footer_1 p {
-    margin: 0 0 2rem;
+    margin: 0 0 1rem;
 }
 
 footer ul li {
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.6rem;
 }
 
 footer ul li a:hover {
@@ -718,8 +740,9 @@ footer ul li a:hover {
 
 .footer_copyright {
     color: var(--primary);
+    font-size: 1.5rem;
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 3rem;
     padding: 1.2rem 0;
     border-top: 1px solid var(--normal);
 }
@@ -805,12 +828,12 @@ footer ul li a:hover {
         opacity: 0;
     }
     .nav_menu li a{
-        background-color:#29e9bcf8;
+        background-color:#130f40;
         box-shadow: -4rem 6rem 10rem rgba(0,0,0,0.6);
         width: 100%;
         height: 100%;
         display: grid;
-        color: var(--bg);
+        color: var(--normal);
         place-items: center;
     }
 
@@ -904,7 +927,7 @@ footer ul li a:hover {
     }
 
     .btn {
-        padding: 0.3rem 1rem;
+        padding: 0.2rem 0.5rem;
     }
 
     .about_container{
